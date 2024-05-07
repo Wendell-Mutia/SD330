@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parking spots</title>
+        <link rel="stylesheet" href="parking.css">
+
+
+        <script>
+            function load_parking_spaces() {
+                var urlParms = new URLSearchParams(window.location.search)
+                var lot = urlParms.get("lot")
+
+            }
+        </script>
+        
+           
+    </head>
+
+    <body>
+        <header>
+            <h1 id="header_title">Marist Parking App</h1>
+        </header>
+
+
+        <nav class="breadcrumbs">
+            <ol>
+                <li class="breadcrumbs"><a href="parking.html"><img src="logo.jpg" width="50" height="50"></a></li>
+                <li class="breadcrumbs"><a href="parkinglots.html">Parking Lots</a></li>
+                <li class="breadcrumbs">Parking Spaces</li>
+            </ol>
+        </nav>
+
+        <ul id="parking_spaces">
+
+        </ul>
+
+        <hr>
+        <footer>
+            <small>&copy; Wendell J. Mutia 5/6/2024</small>
+        </footer>
+    </body>
+</html>

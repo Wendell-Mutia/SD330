@@ -1,11 +1,13 @@
 {
     "parking_lots": {
         "beck_west_lot": {
-            "name": "Beck West",
+            "name": "beck_west_lot",
             "map_filename": "mapBeckWest.jpg",
             "total_spaces": "50",
             "comments": "Located adjacent to Beck East Parking lot and the Science and Allied Health Building.",
-            "other_attributes": {},
+            "other_attributes": {
+                "Used-By": ["Faculty/Staff, Commuters, Residents"]
+            },
             "spaces": [
                 {
                     "id": 1,
@@ -106,44 +108,238 @@
             ]
         },
         "beck_east_lot": {
-            "name": "Beck East",
+            "name": "beck_east_lot",
             "map_filename": "mapBeckEast.jpg",
             "total_spaces": "50",
             "comments": "Located adjacent to Beck East Parking lot and the Science and Allied Health Building.",
-            "other_attributes": {},
-            "spaces": []
+            "other_attributes": {
+                "Used-By": ["Faculty/Staff, Commuters, Residents"]
+            },
+            "spaces": [
+
+                {
+                    "id": 1,
+                    "type": "Faculty/Staff",
+                    "isHandicap": true,
+                    "status": "Available",
+                    "filled_date_and_time": null,
+                    "reserved_date_and_time": null
+                },
+                {
+                    "id": 2,
+                    "type": "Faculty/Staff",
+                    "isHandicap": true,
+                    "status": "Available",
+                    "filled_date_and_time": null,
+                    "reserved_date_and_time": null
+                },
+                {
+                    "id": 3,
+                    "type": "Faculty/Staff",
+                    "isHandicap": true,
+                    "status": "Available",
+                    "filled_date_and_time": null,
+                    "reserved_date_and_time": null
+                },
+                {
+                    "id": 4,
+                    "type": "Student",
+                    "isHandicap": true,
+                    "status": "Available",
+                    "filled_date_and_time": null,
+                    "reserved_date_and_time": null
+                },
+                {
+                    "id": 5,
+                    "type": "Student",
+                    "isHandicap": true,
+                    "status": "Reserved",
+                    "filled_date_and_time": null,
+                    "reserved_date_and_time": "5/2/2024 11:00am"
+                },
+                {
+                    "id": 6,
+                    "type": "Student",
+                    "isHandicap": true,
+                    "status": "Available",
+                    "filled_date_and_time": null,
+                    "reserved_date_and_time": null
+                },
+                {
+                    "id": 7,
+                    "type": "Faculty/Staff",
+                    "isHandicap": false,
+                    "status": "Filled",
+                    "filled_date_and_time": "4/28/2024 9:00am",
+                    "reserved_date_and_time": null
+                },
+                {
+                    "id": 8,
+                    "type": "Faculty/Staff",
+                    "isHandicap": false,
+                    "status": "Reserved",
+                    "filled_date_and_time": null,
+                    "reserved_date_and_time": "5/11/2024 11:00pm"
+                },
+                {
+                    "id": 9,
+                    "type": "Faculty/Staff",
+                    "isHandicap": false,
+                    "status": "Available",
+                    "filled_date_and_time":null,
+                    "reserved_date_and_time": null
+                },
+                {
+                    "id": 10,
+                    "type": "Student",
+                    "isHandicap": false,
+                    "status": "Filled",
+                    "filled_date_and_time": "4/28/2024 3:00pm",
+                    "reserved_date_and_time": null
+                },
+                {
+                    "id": 11,
+                    "type": "Student",
+                    "isHandicap": false,
+                    "status": "Reserved",
+                    "filled_date_and_time": null,
+                    "reserved_date_and_time": "5/13/2024"
+                },
+                {
+                    "id": 12,
+                    "type": "Student",
+                    "isHandicap": false,
+                    "status": "Available",
+                    "filled_date_and_time": null,
+                    "reserved_date_and_time": null
+                }
+            ]
         },
         "foy_lot": {
-            "name": "Foy",
+            "name": "foy_lot",
             "map_filename": "mapFoy.jpg",
             "total_spaces": "100",
-            "comments": "Parking Lot reserved for faculty/staff and to the right of Hancock.",
-            "other_attributes": {},
-            "spaces": []
+            "comments": "Parking Lot reserved only for faculty/staff and is to the right of Hancock!",
+            "other_attributes": {
+                "Used-By": ["Faculty/Staff"]
+            },
+            "spaces": [{
+                "id": 1,
+                "type": "Faculty/Staff",
+                "isHandicap": true,
+                "status": "Available",
+                "filled_date_and_time": null,
+                "reserved_date_and_time": null
+            },
+            {
+                "id": 2,
+                "type": "Faculty/Staff",
+                "isHandicap": false,
+                "status": "Filled",
+                "filled_date_and_time": "4/30/2024 12:00pm",
+                "reserved_date_and_time": null
+            },
+            {
+                "id": 3,
+                "type": "Faculty/Staff",
+                "isHandicap": false,
+                "status": "Reserved",
+                "filled_date_and_time": null,
+                "reserved_date_and_time": "5/13/2024 10:00pm"
+            },
+            {
+                "id": 4,
+                "type": "Student",
+                "isHandicap": false,
+                "status": "Available",
+                "filled_date_and_time": null,
+                "reserved_date_and_time": null
+            }
+        
+        ]
         },
         "mccann_sheahan_lot": {
-            "name": "McCann/Sheahan",
+            "name": "mccann_sheahan_lot",
             "map_filename": "mccann_sheahan.jpg",
             "total_spaces": "300",
             "comments": "Parking lot near the James J. McCann Center.",
-            "other_attributes": {},
-            "spaces": []
+            "other_attributes": {
+                "Used-By": ["Faculty/Staff, Commuters, Residents"]
+            },
+            "spaces": [{
+                "id": 1,
+                "type": "Faculty/Staff",
+                "isHandicap": false,
+                "status": "Filled",
+                "filled_date_and_time": "4/29/2024 11:00am",
+                "reserved_date_and_time": null
+            },
+            {
+                "id": 2,
+                "type": "Faculty/Staff",
+                "isHandicap": false,
+                "status": "Reserved",
+                "filled_date_and_time": null,
+                "reserved_date_and_time": "5/15/2024 10:00pm"
+            },
+            {
+                "id": 3,
+                "type": "Faculty/Staff",
+                "isHandicap": false,
+                "status": "Available",
+                "filled_date_and_time":null,
+                "reserved_date_and_time": null
+            }]
         },
         "donnelly_lot": {
             "name": "Donnelly",
             "map_filename": "donnelly.jpg",
             "total_spaces": "100",
             "comments": "Parking lot located in front of Donnelly Hall.",
-            "other_attributes": {},
-            "spaces": []
+            "other_attributes": {
+                "Used-By": ["A Special Case: Donnelly Lot"]
+            },
+            "spaces": [{
+                "id": 1,
+                "type": "Faculty/Staff",
+                "isHandicap": false,
+                "status": "Available",
+                "filled_date_and_time":null,
+                "reserved_date_and_time": null
+            }]
         },
         "health_and_science_lot": {
-            "name": "Allied Health and Science",
+            "name": "health_and_science_lot",
             "map_filename": "Allied_Health_&_Science.jpg",
             "total_spaces": "50",
             "comments": "Parking lot neighboring the Science and Allied Health Building.",
-            "other_attributes": {},
-            "spaces": []
+            "other_attributes": {
+                "Used-By": ["Faculty/Staff"]
+            },
+            "spaces": [{
+                "id": 1,
+                "type": "Faculty/Staff",
+                "isHandicap": true,
+                "status": "Available",
+                "filled_date_and_time": null,
+                "reserved_date_and_time": null
+            },
+            {
+                "id": 2,
+                "type": "Faculty/Staff",
+                "isHandicap": false,
+                "status": "Filled",
+                "filled_date_and_time": "4/28/2024 5:00pm",
+                "reserved_date_and_time": null
+            },
+            {
+                "id": 3,
+                "type": "Faculty/Staff",
+                "isHandicap": false,
+                "status": "Reserved",
+                "filled_date_and_time": null,
+                "reserved_date_and_time": "5/19/2024 2:00pm"
+            }]
         }
     }
 }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parking Lots Page!</title>
+    <link rel="stylesheet" href="parking.css">
+    <script>
+        async function displayLots() {
+
+            var urlParms = new URLSearchParams(window.location.search)
+            var lot = urlParms.get("lot")
+
+            // retrive the lots from JSON file
+            const response = await fetch("http://wendell-mutia.github.io/SD330/parking.json")
+            const data = await response.json()
+            
+            var htmlString = "";
+
+            let lotkeys = Object.keys(data["parking_lots"]);
+            for (let i in lotkeys) {
+
+                
+                htmlString += `<li class="boxed-content" style="margin-right: 10%"> 
+                    <img src="`+ data["parking_lots"][lotkeys[i]]["map_filename"] +`" width="400" height="200"></a>
+                    <p>The lot name is -- ` + data["parking_lots"][lotkeys[i]]["name"] + `
+                </p>
+                <p>Access to the lot spaces <a href="parkingspaces.html?lot=`+ data["parking_lots"][lotkeys[i]]["name"] + `">Here!</a></p> 
+                <p>Total number of parking spaces for -- ` + data["parking_lots"][lotkeys[i]]["name"] + ` -- is `
+                    + data["parking_lots"][lotkeys[i]]["total_spaces"] + ` parking spaces</p>
+                
+                    <p>Parking lot comments -- ` + data["parking_lots"][lotkeys[i]]["comments"] + `</p>
+                
+
+                  
+                    
+                   
+                   
+                </li>
+
+                
+
+                <br>
+                <hr>
+            
+            `
+            }
+
+            document.getElementById("lots").innerHTML += htmlString
+        }
+    </script>
+
+</head>
+
+<body onload=displayLots()>
+
+    <header>
+        <h1 id="header_title">Marist Parking App</h1>
+    </header>
+
+    <nav class="breadcrumbs">
+        <ol>
+            <li class="breadcrumbs"><a href="parking.html"><img src="logo.jpg" width="50" height="50"></a></li>
+            <li class="breadcrumbs">Parking Lots</li>
+        </ol>
+    </nav>
+
+    <hr>
+
+    <ul id="lots">
+
+    </ul>
+
+    <footer>
+        <small>&copy; Wendell J. Mutia 5/6/2024</small>
+    </footer>
+</body>
+
+</html>
