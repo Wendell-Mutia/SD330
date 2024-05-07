@@ -7,8 +7,7 @@
     <script>
         async function displayLots() {
 
-            var urlParms = new URLSearchParams(window.location.search)
-            var lot = urlParms.get("lot")
+            
 
             // retrive the lots from JSON file
             const response = await fetch("http://wendell-mutia.github.io/SD330/parking.json")
@@ -42,7 +41,7 @@
 
 </head>
 
-<body onload=displayLots()>
+<body onload=displayLots();>
 
     <header>
         <h1 id="header_title">Marist Parking App <img src="logo.jpg" width="50" height="50"></h1>
