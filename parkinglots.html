@@ -19,7 +19,6 @@
             let lotkeys = Object.keys(data["parking_lots"]);
             for (let i in lotkeys) {
 
-                
                 htmlString += `<li class="boxed-content" style="margin-right: 10%"> 
                     <img src="`+ data["parking_lots"][lotkeys[i]]["map_filename"] +`" width="400" height="200"></a>
                     <p>The lot name is -- ` + data["parking_lots"][lotkeys[i]]["name"] + `
