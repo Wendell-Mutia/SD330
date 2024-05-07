@@ -1,7 +1,7 @@
 {
     "parking_lots": {
         "beck_west_lot": {
-            "name": "beck_west_lot",
+            "name": "Beck West lot",
             "map_filename": "mapBeckWest.jpg",
             "total_spaces": "50",
             "comments": "Located adjacent to Beck East Parking lot and the Science and Allied Health Building.",
@@ -108,7 +108,7 @@
             ]
         },
         "beck_east_lot": {
-            "name": "beck_east_lot",
+            "name": "Beck East Lot",
             "map_filename": "mapBeckEast.jpg",
             "total_spaces": "50",
             "comments": "Located adjacent to Beck East Parking lot and the Science and Allied Health Building.",
@@ -216,7 +216,7 @@
             ]
         },
         "foy_lot": {
-            "name": "foy_lot",
+            "name": "Foy Lot",
             "map_filename": "mapFoy.jpg",
             "total_spaces": "100",
             "comments": "Parking Lot reserved only for faculty/staff and is to the right of Hancock!",
@@ -259,7 +259,7 @@
         ]
         },
         "mccann_sheahan_lot": {
-            "name": "mccann_sheahan_lot",
+            "name": "McCann Sheahan Lot",
             "map_filename": "mccann_sheahan.jpg",
             "total_spaces": "300",
             "comments": "Parking lot near the James J. McCann Center.",
@@ -309,7 +309,7 @@
             }]
         },
         "health_and_science_lot": {
-            "name": "health_and_science_lot",
+            "name": "Allied Health and Science Lot",
             "map_filename": "Allied_Health_&_Science.jpg",
             "total_spaces": "50",
             "comments": "Parking lot neighboring the Science and Allied Health Building.",

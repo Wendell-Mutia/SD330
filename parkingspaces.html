@@ -1,42 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Parking spots</title>
-        <link rel="stylesheet" href="parking.css">
+
+<head>
+    <title>Parking spots</title>
+    <link rel="stylesheet" href="parking.css">
 
 
-        <script>
-            function load_parking_spaces() {
-                var urlParms = new URLSearchParams(window.location.search)
-                var lot = urlParms.get("lot")
+    <script>
+        async function load_parking_spaces() {
+            var urlParms = new URLSearchParams(window.location.search)
+            var lot = urlParms.get("lot")
 
+            var htmlString = ""
+
+            const response = await fetch("http://wendell-mutia.github.io/SD330/parking.json")
+            const data = await response.json()
+
+
+            var spaceindex = 0
+
+            for (let i in data["parking_lots"][lot]["spaces"]) {
+                var spaces = data["parking_lots"][lot]["spaces"][i]
+                htmlString += `<li class="boxed-content" style="margin-right: 10%"> 
+
+                        <h3>Parking Space # `+ spaces["id"] + `</h3>
+                        <p>The Parking space number(ID): `+ spaces["id"] +`</p>
+                        <p>The Parking space type is for: `+ spaces["type"] +`</p>
+                        <p>The Parking space handicap status: `+ isDisabled(spaces["isHandicap"]) +`</p>
+                        <p>The Parking space availability status: ` + spaces["status"] + `</p>` 
+                        + displayStatusInfo(spaces["status"],spaces["filled_date_and_time"],spaces["reserved_date_and_time"]) + `    
+                        </li>
+                        <br>
+                        <hr>`
             }
-        </script>
-        
-           
-    </head>
 
-    <body>
-        <header>
-            <h1 id="header_title">Marist Parking App</h1>
-        </header>
+            document.getElementById("parking_spaces").innerHTML = htmlString;
+        }
+
+        function isDisabled(isHandicap) {
+            // Function to return status based on whether or not the parking space is a handicap space!
+            if (isHandicap) {
+                return ` "Handcapped." `
+            }
+            else {
+                return ` "Not Handcapped." `
+            }
+
+        }
+
+        function displayStatusInfo(status,filledtime,reservedtime) {
+            if (status == "Filled") {
+                return " <p> The scheduled filled parking space is: " + filledtime + "</p> "
+            }
+            else if (status == "Reserved") {
+                return " <p> The scheduled reserved parking space is: " + reservedtime + "  </p> "
+            }
+            else {
+                return "" // Available since the filled/reserved values are null
+            }
+        }
+
+    </script>
 
 
-        <nav class="breadcrumbs">
-            <ol>
-                <li class="breadcrumbs"><a href="parking.html"><img src="logo.jpg" width="50" height="50"></a></li>
-                <li class="breadcrumbs"><a href="parkinglots.html">Parking Lots</a></li>
-                <li class="breadcrumbs">Parking Spaces</li>
-            </ol>
-        </nav>
+</head>
 
-        <ul id="parking_spaces">
+<body onload=load_parking_spaces()>
+    <header>
+        <h1 id="header_title">Marist Parking App <img src="logo.jpg" width="50" height="50"></h1>
+    </header>
 
-        </ul>
 
-        <hr>
-        <footer>
-            <small>&copy; Wendell J. Mutia 5/6/2024</small>
-        </footer>
-    </body>
+    <nav class="breadcrumbs">
+        <ol>
+            <li class="breadcrumbs"><a href="parking.html"><img src="logo.jpg" width="50" height="50"></a></li>
+            <li class="breadcrumbs"><a href="parkinglots.html">Parking Lots</a></li>
+            <li class="breadcrumbs">Parking Spaces</li>
+        </ol>
+    </nav>
+
+    <ul id="parking_spaces">
+
+    </ul>
+
+    <hr>
+    <footer>
+        <small>&copy; Wendell J. Mutia 5/6/2024</small>
+    </footer>
+</body>
+
 </html>

@@ -15,6 +15,7 @@
             const data = await response.json()
             
             var htmlString = "";
+        
 
             let lotkeys = Object.keys(data["parking_lots"]);
             for (let i in lotkeys) {
@@ -29,20 +30,10 @@
                     + data["parking_lots"][lotkeys[i]]["total_spaces"] + ` parking spaces</p>
                 
                     <p>Parking lot comments -- ` + data["parking_lots"][lotkeys[i]]["comments"] + `</p>
-                
-
-                  
-                    
-                   
-                   
-                </li>
-
-                
-
-                <br>
-                <hr>
             
-            `
+                </li>
+                <br>
+                <hr>`
             }
 
             document.getElementById("lots").innerHTML += htmlString
@@ -54,7 +45,7 @@
 <body onload=displayLots()>
 
     <header>
-        <h1 id="header_title">Marist Parking App</h1>
+        <h1 id="header_title">Marist Parking App <img src="logo.jpg" width="50" height="50"></h1>
     </header>
 
     <nav class="breadcrumbs">
@@ -66,7 +57,7 @@
 
     <hr>
 
-    <ul id="lots">
+    <ul id="lots" >
 
     </ul>
 
